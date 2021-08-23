@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+    "name": "Fertilizers",
+    "article": "1",
+    "price": "155",
+    "image": "bg4-4.png"
+  },{
+    "name": "Fertilizers Super1",
+    "article": "2",
+    "price": "275",
+    "image": "bg4-9.png"
+  },{
+    "name": "Fertilizers+",
+    "article": "3",
+    "price": "115",
+    "offer": "BOGOF",
+    "image": "bg4-2.png"
+  },{
+    "name": "FertilizersPro",
+    "article": "4",
+    "price": "250",
+    "image": "bg4-9.png"
+  },{
+    "name": "FertilizersMaster",
+    "article": "5",
+    "price": "150",
+    "image": "bg4-3.png"
+  },{
+    "name": "FertilizersMasterPro",
+    "article": "6",
+    "price": "30",
+    "image": "bg4-10.png"
+  }
+]
+}
