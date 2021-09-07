@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import axios from 'axios'
+//import axios from 'axios'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
@@ -22,7 +22,7 @@ let store = new Vuex.Store ({
             item.quantity++
           }
         })
-        if (!isProductExists) {
+        if (!isProductExists) {          
           state.cart.push(product)
 
         }
@@ -44,18 +44,21 @@ let store = new Vuex.Store ({
 
   },
   actions: {
-    GET_PRODUCTS_FROM_API({commit}) {
-      return axios('http://localhost:3000/products', {
-        method: "GET"
-      })
-        .then((products) => {
-          commit('SET_PRODUCTS_TO_STATE', products.data);
-          return products
-        })
-        .catch((error) => {
-          console.log(error)
-          return error
-        })
+    GET_PRODUCTS_FROM_API({ commit }) {
+      const products = [{image:'1.png', price: 10, name: 'test1', article:1}, {image:'2.png', price: 100, name: 'test2', article:2}]
+      commit('SET_PRODUCTS_TO_STATE', products);
+      return products
+      // return axios('http://localhost:3000/products', {
+      //   method: "GET"
+      // })
+      //   .then((products) => {
+      //     commit('SET_PRODUCTS_TO_STATE', products.data);
+      //     return products
+      //   })
+      //   .catch((error) => {
+      //     console.log(error)
+      //     return error
+      //   })
     },
     ADD_TO_CART({commit}, product) {
       commit('SET_CART', product)

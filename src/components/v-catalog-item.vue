@@ -1,6 +1,6 @@
 <template>
     <div class="v-catalog-item">
-        <img class="v-catalog-item__image" v-bind:src=" 'https://www.ferti-organic.com/theme/img/' + productData.image" alt="img">
+        <img class="v-catalog-item__image" :src=" 'https://www.ferti-organic.com/theme/img/productos/' + productData.image" alt="img">
         <p class="v-catalog-itemName">{{productData.name}}</p>
         <p class="v-catalog-itemPrice">Price: {{productData.price}}</p>
         <button class="v-catalog-itemAddCart btn" 

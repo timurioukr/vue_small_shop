@@ -8,7 +8,7 @@
 			<v-catalog-item 
 				v-for="product in PRODUCTS"
 				:key="product.article"
-				v-bind:productData="product"
+				:productData="product"
 				@addToCart="addToCart"
 			/>
 		</div>
@@ -46,6 +46,7 @@ export default {
 	},
   mounted() {
     this.GET_PRODUCTS_FROM_API()
+    //необязательно - чисто показівает что загрузка удалась
     .then((response) => {
       if (response.data) {
         console.log('Data arrived!')
