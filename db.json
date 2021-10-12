@@ -4,33 +4,39 @@
     "name": "Fertilizers",
     "article": "1",
     "price": "155",
-    "image": "bg4-4.png"
+    "image": "bg4-4.png",
+    "category": "Categori 1"
   },{
     "name": "Fertilizers Super1",
     "article": "2",
     "price": "275",
-    "image": "bg4-9.png"
+    "image": "bg4-9.png",
+    "category": "Categori 1"
   },{
     "name": "Fertilizers+",
     "article": "3",
     "price": "115",
     "offer": "BOGOF",
-    "image": "bg4-2.png"
+    "image": "bg4-2.png",
+    "category": "Categori 2"
   },{
     "name": "FertilizersPro",
     "article": "4",
     "price": "250",
-    "image": "bg4-9.png"
+    "image": "bg4-9.png",
+    "category": "Categori 2"
   },{
     "name": "FertilizersMaster",
     "article": "5",
     "price": "150",
-    "image": "bg4-3.png"
+    "image": "bg4-3.png",
+    "category": "Categori 2"
   },{
     "name": "FertilizersMasterPro",
     "article": "6",
     "price": "30",
-    "image": "bg4-10.png"
+    "image": "bg4-10.png",
+    "category": "Categori 1"
   }
 ]
 }
