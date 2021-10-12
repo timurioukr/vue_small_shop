@@ -28,7 +28,7 @@ export default {
   mounted() {
     let vm = this
     window.addEventListener('resize', function () {
-      if (window.innerWidth > 767) {
+      if (window.innerWidth < 767) {
         vm.SET_DESKTOP()
         console.log(vm.IS_DESKTOP);
       } else {
