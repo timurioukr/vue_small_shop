@@ -1,8 +1,16 @@
 <template>
   <div class="vselect">
-    <p class="title" @click="areOptionsVisible = !areOptionsVisible">{{selected}}</p>
-    <div class="options" v-if="areOptionsVisible">
-      <p v-for="option in options" :key="option.value" @click="selectOption(option)">{{ option.name }}</p>
+    <p class="title" @click="areOptionsVisible = !areOptionsVisible">
+      {{ selected }}
+    </p>
+    <div class="options" v-if="areOptionsVisible || isExpanded">
+      <p
+        v-for="option in options"
+        :key="option.value"
+        @click="selectOption(option)"
+      >
+        {{ option.name }}
+      </p>
     </div>
   </div>
 </template>
@@ -14,13 +22,17 @@ export default {
     options: {
       type: Array,
       default() {
-        return []
+        return [];
       },
     },
     selected: {
       type: String,
-      default: ''
-    }
+      default: "",
+    },
+    isExpanded: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -29,19 +41,19 @@ export default {
   },
   methods: {
     selectOption(option) {
-      this.$emit('select', option)
-      this.areOptionsVisible = false
+      this.$emit("select", option);
+      this.areOptionsVisible = false;
     },
     hideSelect() {
-      this.areOptionsVisible = false
-    }
+      this.areOptionsVisible = false;
+    },
   },
   mounted() {
-    document.addEventListener("click", this.hideSelect.bind(this), true )
+    document.addEventListener("click", this.hideSelect.bind(this), true);
   },
-  beforeDestroy(){
-    document.removeEventListener("click", this.hideSelect)
-  }
+  beforeDestroy() {
+    document.removeEventListener("click", this.hideSelect);
+  },
 };
 </script>
 
@@ -66,6 +78,6 @@ export default {
 }
 
 .options p:hover {
-        background: #b1b1b1;
-    }
+  background: #b1b1b1;
+}
 </style>
