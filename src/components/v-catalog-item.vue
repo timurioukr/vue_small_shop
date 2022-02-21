@@ -1,9 +1,10 @@
 <template>
     <div class="v-catalog-item">
       <v-popup 
-      v-if="isInfoPopup"
-      @closePopup="closePopup"
-      rightButtonTitle="Add to cart"
+        v-if="isInfoPopup"
+        @closePopup="closePopup"
+        rightButtonTitle="Add to cart"
+        @action="addToCart"
       :popupName="productData.name"
       >
         <img class="v-catalog-item__image" v-bind:src=" 'https://www.ferti-organic.com/theme/img/' + productData.image" alt="img">
